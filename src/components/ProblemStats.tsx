@@ -7,7 +7,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import React, { useEffect, useState } from "react";
-import { getHeatmapIntensity } from "../lib/util";
+import { apiUrl, getHeatmapIntensity } from "../lib/util";
 import { QueryClient, useQuery } from "@tanstack/react-query";
 import { getStudentProblemStats } from "../lib/API/studentApi";
 import RecentProblems from "./RecentProblems";
@@ -47,7 +47,7 @@ const ProblemStats = ({ studentId }: { studentId: string }) => {
     queryKey: ["syncStatus", studentId],
     queryFn: () =>
       axios
-        .get(`${process.env.VITE_SERVER}/s/${studentId}/sync`)
+        .get(`${apiUrl}/s/${studentId}/sync`)
         .then((res) => res.data),
     enabled: !!studentId,
     refetchInterval: 1000 * 60 * 2, // Check every 2 min

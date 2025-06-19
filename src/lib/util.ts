@@ -34,3 +34,4 @@ export const getHeatmapIntensity = (count: number, maxCount: number) => {
 };
 
 
+export const apiUrl = import.meta.env.VITE_SERVER;

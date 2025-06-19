@@ -101,11 +101,11 @@ export default function StudentTable() {
     if (rating >= 1200) return "text-green-600 bg-green-50";
     return "text-gray-600 bg-gray-50";
   };
-
+console.log(students)
   const avgRating =
     students.length > 0
       ? Math.round(
-          students.reduce((sum, s) => sum + s.currentRating, 0) /
+          students?.reduce((sum, s) => sum + s.currentRating, 0) /
             students.length
         )
       : 0;

@@ -5,7 +5,9 @@ import type {
   ProblemStats,
   RecentProblem,
 } from "../types";
-const API = axios.create({ baseURL: `${process.env.VITE_SERVER}` });
+import { apiUrl } from "../util";
+
+const API = axios.create({ baseURL: `${apiUrl}` });
 
 export const getStudents = () => API.get("/s/");
 export const getStudentById = (id: string) => API.get(`/s/${id}`);
