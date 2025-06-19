@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import StudentTable from "./components/studentsTable";
-import StudentProfile from "./components/studentProfile";
+import StudentTable from "./pages/studentsTable";
+import StudentProfile from "./pages/studentProfilePage";
 
 function App() {
   return (

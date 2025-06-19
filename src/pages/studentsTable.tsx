@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { getStudents } from "../lib/API/studentApi";
+import Navbar from "../components/Navbar";
 
 interface Student {
   _id: string;
@@ -118,6 +119,7 @@ export default function StudentTable() {
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8">
         {/* Header */}
+           <Navbar theme={"dakr"} toggleTheme={()=>{}}/>
         <div className="mb-8">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
             <div>
